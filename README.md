@@ -32,18 +32,6 @@ Currently supported diagrams and charts:
 - Packet
 - Radar
 
-### Generate AI-powered diagrams directly from your code!
-Transform your ideas and source code into clear, insightful diagrams with our new AI integration in VS Code.<br>
-Just mention **@mermaid-chart** in any GitHub Copilot Chat and describe the diagram you want to create — even link specific source code files!<br>
- Whether it's a class diagram, sequence diagram, entity relationship diagram, or more — the AI assistant will analyze the code, generate the appropriate Mermaid syntax, and instantly show a live preview.<br>
-Let your code speak for itself — effortlessly.
-
-![Image illustrating accessible diagrams in explorer panel](https://docs.mermaidchart.com/img/plugins/ai-generate-diagram.gif)
-
-With Smart Diagram Regeneration, when your source code or requirements change, the extension can detect these changes and offer to update related diagrams with a single click.
-
-![Image illustrating accessible diagrams in explorer panel](https://docs.mermaidchart.com/img/plugins/vscode-plugin-update-diagram.gif)
-
 ### Real-Time local Edit & Preview 
 Now you get a side-by-side real time preview of the mermaid diagram while editing the diagram locally. This helps the user to see the true power of a mermaid's text-based diagram, where each change in text is reflected immediately on the diagram.
 
