@@ -19,6 +19,7 @@ function init() {
         theme: (document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
             ? darkModeTheme ?? 'dark'
             : lightModeTheme ?? 'default' ) as MermaidConfig['theme'],
+        securityLevel: 'loose',
     };
 
     mermaid.initialize(config);

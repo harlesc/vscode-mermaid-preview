@@ -66,6 +66,7 @@
           theme: theme,
           maxEdges: maxEdges,
           maxTextSize: maxTextSize,
+          securityLevel: "loose",
         });
       } catch (error) {
         console.error('Error initializing Mermaid:', error);
@@ -105,6 +106,7 @@
         const currentPan = panzoomInstance?.getPan() || { x: 0, y: 0 };
         const { svg } = await mermaid.render("diagram-graph", diagramContent);
         element.innerHTML = svg;
+        ensureLinkHandler(element);
         if (theme?.includes("dark")) {
           element.style.backgroundColor= "#1e1e1e"
         } else {
@@ -255,6 +257,19 @@
   function resetView() {
     panzoomInstance?.reset();
     updateZoomLevel();
+  }
+
+  let linkHandlerAttached = false;
+  function ensureLinkHandler(element: HTMLElement) {
+    if (linkHandlerAttached) return;
+    element.addEventListener("click", (event) => {
+      const target = (event.target as HTMLElement)?.closest("a");
+      const href = target?.getAttribute("href");
+      if (!href) return;
+      event.preventDefault();
+      vscode.postMessage({ type: "openLink", href });
+    });
+    linkHandlerAttached = true;
   }
 
 

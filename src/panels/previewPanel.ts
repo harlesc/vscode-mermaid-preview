@@ -132,6 +132,13 @@ export class PreviewPanel {
       }, async () => {
         await saveDiagramAsSvg(this.document, message.svgBase64, this.lastContent);
       });
+    } else if (message.type === "openLink" && message.href) {
+      try {
+        const uri = vscode.Uri.parse(message.href);
+        await vscode.env.openExternal(uri);
+      } catch (error) {
+        vscode.window.showErrorMessage(`Failed to open link: ${message.href}`);
+      }
     }
   });
 
