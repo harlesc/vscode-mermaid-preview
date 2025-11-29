@@ -1,16 +1,16 @@
 {
-  "name": "vscode-mermaid-preview",
-  "displayName": "Mermaid Preview",
-  "description": "Mermaid diagram previewer for Visual Studio Code, now maintained by the creators of Mermaid.js",
+  "name": "mermaid-click-preview",
+  "displayName": "Mermaid Click Preview",
+  "description": "Mermaid diagram previewer with clickable nodes that open VS Code files/lines",
   "license": "MIT",
   "version": "2.1.1",
-  "publisher": "vstirbu",
+  "publisher": "harlesc",
   "bugs": {
     "url": "https://github.com/vstirbu/vscode-mermaid-preview/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vstirbu/vscode-mermaid-preview.git"
+    "url": "https://github.com/harlesc/vscode-mermaid-preview.git"
   },
   "icon": "images/favicon.png",
   "galleryBanner": {
