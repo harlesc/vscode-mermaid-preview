@@ -35,7 +35,7 @@ import analytics from "./analytics";
 import { RemoteSyncHandler } from "./remoteSyncHandler";
 import { registerRegenerateCommand } from './commercial/sync/regenerateCommand';
 import { initializeAIChatParticipant } from "./commercial/ai/chatParticipant";
-import { setPreviewBridge, registerTools, setValidationBridge,initializePlugin } from '@mermaid-chart/vscode-utils';
+import { setPreviewBridge, registerTools, setValidationBridge,initializePlugin } from './shims/vscodeUtils';
 import { PreviewBridgeImpl } from "./commercial/ai/tools/previewTool";
 import { ValidationBridgeImpl } from "./commercial/ai/tools/validationTool";
 import { injectMermaidTheme } from "./previewmarkdown/themeing";
